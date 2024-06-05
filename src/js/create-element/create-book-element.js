@@ -1,4 +1,6 @@
+import { get } from "lodash";
 import createElement from "./template";
+import displayBookDescription from "./displayDescription";
 // createElement(tag, className, parentContainer)
 
 export default function createBookElement(booksDetails){
@@ -17,5 +19,7 @@ export default function createBookElement(booksDetails){
 
         const descriptionBtn = createElement('button', 'description-btn', bookDiv)
         descriptionBtn.textContent = 'about'
+
     })
+    displayBookDescription()
 }
