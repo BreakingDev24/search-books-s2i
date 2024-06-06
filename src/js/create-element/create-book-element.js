@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import createElement from "./template";
-import displayBookDescription from "./displayDescription";
+import displayBookDescription from "../display-element/displayDescription";
 // createElement(tag, className, parentContainer)
 
 export default function createBookElement(booksDetails){
