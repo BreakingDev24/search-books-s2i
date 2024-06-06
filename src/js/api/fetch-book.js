@@ -9,7 +9,6 @@ export const fetchBookData = async (inputBookGenres) => {
         const response = await axios.get(bookUrl)
         const bookDetails = getBookDetails(response)
         createBookElement(bookDetails)
-        // console.log(response)
     } catch(err) {
         console.log(err);
     }
