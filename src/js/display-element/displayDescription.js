@@ -8,6 +8,7 @@ export default async function displayBookDescription () {
         const descriptionBtn = document.querySelectorAll('.description-btn')
         const descriptionContainer = document.getElementById('description-container')
         const descriptionText = document.querySelector('.description-text')
+        const closeDialogBtn = document.getElementById('close-dialog-btn')
 
         descriptionBtn.forEach((button) => {
             button.addEventListener('click', async (e) => {
@@ -18,13 +19,16 @@ export default async function displayBookDescription () {
                     const description = await fetchDescription(key)
                     descriptionContainer.showModal()
                     descriptionText.textContent = description
-                    console.log(typeof description)
+                    // console.log(description)
                 } catch (err){
-                    
+                    console.error(err)
                 }
-            })
+            });
 
-        })
+        });
+        closeDialogBtn.addEventListener('click', () => {
+            descriptionContainer.close();
+        });
     } catch (err){
 
     }
