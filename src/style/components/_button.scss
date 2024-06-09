@@ -1,0 +1,13 @@
+@use '../utils/' as *;
+
+.description-btn {
+    padding: 5px 15px;
+    font-weight: bolder;
+
+    width: fit-content;
+    text-transform: uppercase;
+
+    background-color: $bg-seconadry-color;
+    color: $bg-bookdiv-color;
+    border: 1px solid $text-secondary-color;
+}

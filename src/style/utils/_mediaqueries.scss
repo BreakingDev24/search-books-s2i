@@ -1,0 +1,15 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Mixin per le media query
+@mixin media-breakpoint-up($name) {
+  $breakpoint: map-get($breakpoints, $name);
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,9 @@
+@use '../utils/' as *;
+
+.container {
+    background-color: $bg-primary-color;
+    min-height: 100vh;
+    padding: 20px 0;
+    display: grid;
+    gap: 20px;
+}

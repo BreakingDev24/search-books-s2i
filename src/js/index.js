@@ -1,3 +1,5 @@
+import '../style/styles.scss'
+
 import { fetchBookData } from "./api/fetch-book";
 import { getInput } from "./display-element/displayBook";
 
