@@ -1,10 +1,16 @@
 @use '../utils/' as *;
 
 header {
-    background-color: $bg-primary-color-light;
-    padding: 20px 10px;
+    // background-color: $bg-primary-color-light;
+    padding: 20px 0;
 
     display: grid;
     justify-items: center;
     align-items: center;
+
+    .view-btn-container {
+        justify-self: end;
+    }
 }
+
+
