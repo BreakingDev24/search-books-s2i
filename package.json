@@ -19,6 +19,7 @@
     "@babel/runtime": "^7.24.6",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
