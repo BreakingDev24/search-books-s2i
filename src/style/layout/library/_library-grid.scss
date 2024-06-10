@@ -1,0 +1,33 @@
+
+@use '../../utils/' as *;
+
+.library-grid-view {
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: 1fr 1fr;
+
+    .book-div {
+        display: grid ;
+        justify-items: center ;
+        padding: 20px 10px;
+    }
+
+
+    .book-title, .book-authors {
+        text-align: center;
+    }
+
+
+
+    @include media-breakpoint-up(md){
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+}
