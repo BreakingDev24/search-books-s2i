@@ -5,20 +5,17 @@
     border-radius: 10px;
     border: 1px solid $text-secondary-color;
     color: $text-primary-color;
-    display: grid;
-    justify-items: center;
 
-    padding: 20px 10px;
-   
-
-    .book-title, .book-authors {
-        text-align: center;
-    }
-
-    .book-title {
+    .info-container {
         width: 100%;
         overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;    
+
+        .book-title {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;    
+        }
     }
+
 }
