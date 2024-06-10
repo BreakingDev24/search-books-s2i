@@ -1,0 +1,46 @@
+@use '../../utils/' as *;
+
+.library-list-view {
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    
+    .book-div {
+        display: grid;
+        justify-items: center;
+    
+        padding: 20px 10px;
+        
+        .info-container {
+            width: 90%;
+        }
+    
+        .book-title, .book-authors {
+            text-align: center;
+        }
+
+        .book-title {
+            width: 100%;
+
+        }
+
+        @include media-breakpoint-up(md){
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .book-title, .book-authors {
+                text-align: left;
+            }
+            .book-title {
+                width: fit-content;
+            }
+        }
+    }
+
+
+
+
+}
