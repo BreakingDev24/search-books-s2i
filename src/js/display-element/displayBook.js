@@ -16,7 +16,7 @@ export const getInput =  (e) => {
         }
 
         fetchBookData(inputSubjectsValue)
-        console.log(fetchBookData(inputSubjectsValue))
+        // console.log(fetchBookData(inputSubjectsValue))
         inputSubjects.value = ""
 
 }
