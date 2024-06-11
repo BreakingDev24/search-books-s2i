@@ -1,6 +1,11 @@
-const library = document.getElementById('library');
+export const library = document.getElementById('library');
+const gridBtn = document.getElementById('grid-btn');
+const listBtn = document.getElementById('list-btn');
 
-function setGridView() {
+export let lastClickedButton = ''
+
+
+export function setGridView() {
     if(library.classList.contains('library-list-view')){
         library.classList.remove('library-list-view')
     }
@@ -17,9 +22,17 @@ export function setListView() {
 export const changeView = (e) => {
     const eventTarget = e.target.closest('button');
 
-    if(! eventTarget || eventTarget.nodeName !== 'BUTTON' ){
+    if(!eventTarget || eventTarget.nodeName !== 'BUTTON' ){
         return
     }
+
+    if(lastClickedButton){
+        lastClickedButton.classList.remove('active')
+    }
+    eventTarget.classList.add('active')
+
+    lastClickedButton = eventTarget
+    console.log(eventTarget);
 
     switch(eventTarget.id) {
         case 'list-btn': 
