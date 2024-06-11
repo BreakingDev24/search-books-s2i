@@ -3,8 +3,9 @@
 
 .search-btn{
     border: none;
-    background-color: $text-secondary-color;
-    color: $bg-seconadry-color;
+    background-color: $bg-btn-primary-color;
+    color: $text-btn-color;
+    font-weight: bold;
     border-radius:0 15px 15px 0;
 
     padding:0 15px 0 5px;
@@ -17,13 +18,14 @@
 .description-btn {
     padding: 5px 15px;
     font-weight: bolder;
-
+    border: none;
     width: fit-content;
     text-transform: uppercase;
 
-    background-color: $bg-seconadry-color;
+    background-color: $bg-btn-secondary-color;
     color: $bg-bookdiv-color;
-    border: 1px solid $text-secondary-color;
+    box-shadow: 2px 13px 15px -10px rgba(0,0,0,0.93);
+    // border: 1px solid $bg-btn-primary-color;
 }
 
 
@@ -31,11 +33,19 @@
 .view-btn-container {
     display: flex;
     gap: 10px;
+    padding: 0 10px;
 
-    button {
-        color: white;
+    .view-btn {
+        color: rgb(255, 255, 255);
         background: none;
         border: none;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .active {
+        color: $bg-btn-primary-color;
+        background: #02292cc7;
     }
 }
 

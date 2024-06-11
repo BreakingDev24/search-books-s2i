@@ -1,5 +1,13 @@
+@use '../utils/' as *;
+
 .input-subjects-text {
     border: none;
     border-radius:15px 0 0 15px;
     padding-left: 15px;
+    font-size: 1.5rem;
+    width: 70%;
+
+    &:focus {
+        outline: 1px solid $bg-btn-primary-color;
+    }
 }

@@ -3,8 +3,10 @@
 .book-div {
     background-color: $bg-bookdiv-color;
     border-radius: 10px;
-    border: 1px solid $text-secondary-color;
+    // border: 1px solid $bg-btn-primary-color;
     color: $text-primary-color;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+
 
     .info-container {
         width: 100%;
