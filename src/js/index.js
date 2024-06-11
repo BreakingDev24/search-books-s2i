@@ -8,8 +8,6 @@ import { handleViewportCheck } from './components/viewportChecker';
 const searchBtn = document.getElementById('search-btn');
 const viewBtnContainer = document.getElementById('view-btn-container')
 
-console.log(viewBtnContainer);
-// searchBtn.addEventListener('click', getInput)
-fetchBookData('love')
+searchBtn.addEventListener('click', getInput)
 handleViewportCheck()
 viewBtnContainer.addEventListener('click', changeView)
