@@ -43,3 +43,11 @@ export const changeView = (e) => {
             break;
     }
 }
+
+export function setActviteButtonOnLoad(){
+    if(library.classList.contains('library-grid-view')){
+        gridBtn.classList.add('active')
+        listBtn.classList.remove('active');
+        lastClickedButton = gridBtn
+    }
+} 
