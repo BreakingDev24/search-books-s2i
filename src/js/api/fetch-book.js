@@ -1,9 +1,12 @@
 import axios from "axios";
 import { get } from "lodash";
 
+import { showSpinner, hideSpinner } from "../create-element/createSpinner";
+
 import createBookElement from "../create-element/create-book-element";
 
 export const fetchBookData = async (inputBookGenres) => {
+    showSpinner()
     try {
         const bookUrl = `https://openlibrary.org/subjects/${inputBookGenres}.json`;
         const response = await axios.get(bookUrl)
@@ -11,6 +14,8 @@ export const fetchBookData = async (inputBookGenres) => {
         createBookElement(bookDetails)
     } catch(err) {
         console.log(err);
+    } finally {
+      hideSpinner()
     }
 
 }
