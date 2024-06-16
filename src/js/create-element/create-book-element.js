@@ -24,6 +24,23 @@ export default function createBookElement(booksDetails){
         const bookAuthors = createElement('p', 'book-authors', bookInfoContainer)
         bookAuthors.textContent = firstAuthor
 
+        if(otherAuthors.length > 0){
+            const other = createElement('a', 'other-author', bookAuthors)
+            other.textContent = ' and other';
+            
+            other.setAttribute('tabindex', '0')
+            other.setAttribute('role', 'button');
+            other.setAttribute('data-bs-toggle', 'popover');
+            other.setAttribute('data-bs-trigger', 'focus');
+            other.setAttribute('data-bs-title', 'Other Author');
+            other.setAttribute('data-bs-content', otherAuthors.join(', '));
+            
+            
+            new bootstrap.Popover(other, {
+                trigger: 'focus'
+            });
+              
+        } 
 
         const descriptionBtn = createElement('button', 'description-btn', bookDiv)
         descriptionBtn.textContent = 'about'

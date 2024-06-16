@@ -26,9 +26,12 @@ const getBookDetails = (book) => {
 
   return works.map(work => {
     const key = _.get(work, 'key', 'No description')
-    const title = _.get(work, 'title', 'titolo non disponibile');
+    const bookTitle = _.get(work, 'title', 'titolo non disponibile');
     const authors = _.get(work, 'authors', []).map(author => _.get(author, 'name', 'autore non disponibile'));
-    return {key, title, authors}
+    const firstAuthor = authors.length > 0 ? authors[0] : 'autore non disponibile'
+    const otherAuthors = authors.length > 1 ? authors.slice(1) : []
+
+    return {key, bookTitle, authors, firstAuthor, otherAuthors}
 
   });
 
