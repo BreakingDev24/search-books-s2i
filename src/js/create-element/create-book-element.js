@@ -7,20 +7,28 @@ export default function createBookElement(booksDetails){
     const library = document.getElementById('library')
 
     booksDetails.map(detail => {
-        const {title, authors, key} = detail
+        const {bookTitle, authors, key, firstAuthor, otherAuthors} = detail
         const bookDiv = createElement('div', 'book-div', library)
         bookDiv.dataset.key = key
 
         const bookInfoContainer = createElement('div', 'info-container', bookDiv)
 
-        const bookTitle = createElement('h2', 'book-title', bookInfoContainer)
-        bookTitle.textContent = title
+        const bookTitleElement = createElement('h2', 'book-title', bookInfoContainer)
+        bookTitleElement.setAttribute('data-bs-toggle', 'tooltip')
+        bookTitleElement.setAttribute('data-bs-placement', 'top')
+        bookTitleElement.setAttribute('data-bs-custom-class', 'custom-tooltip')
+        bookTitleElement.setAttribute('title', bookTitle)
+
+        bookTitleElement.textContent = bookTitle
 
         const bookAuthors = createElement('p', 'book-authors', bookInfoContainer)
-        bookAuthors.textContent = authors
+        bookAuthors.textContent = firstAuthor
+
 
         const descriptionBtn = createElement('button', 'description-btn', bookDiv)
         descriptionBtn.textContent = 'about'
+
+        const tooltip = new bootstrap.Tooltip(bookTitleElement)
 
     })
     displayBookDescription()
