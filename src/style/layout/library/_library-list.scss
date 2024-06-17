@@ -3,6 +3,7 @@
 .library-list-view {
     padding: 10px;
     display: grid;
+    grid-template-columns: 100%;
     gap: 10px;
     
     .book-div {
@@ -24,23 +25,31 @@
 
         }
 
+        
+        }
+
         @include media-breakpoint-up(md){
-            padding: 5px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            .book-div{
+                width: 100%;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                overflow: hidden; 
+
+                .info-container {
+                    flex: 1;
+
+                    .book-title, .book-authors {
+                        text-align: left;
+                        flex: 1;
+                    }
+                }
+            }
+    
 
 
-            .book-title, .book-authors {
-                text-align: left;
-            }
-            .book-title {
-                width: fit-content;
-            }
         }
     }
 
 
-
-
-}
