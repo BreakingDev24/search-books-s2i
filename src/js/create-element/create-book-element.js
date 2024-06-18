@@ -27,10 +27,7 @@ export default function createBookElement(booksDetails){
         // Create the book title element with tooltip
         const bookTitleElement = createElement('h2', 'book-title', bookInfoContainer);
         // Set attribute for the book title tooltip
-        bookTitleElement.setAttribute('data-bs-toggle', 'tooltip');
-        bookTitleElement.setAttribute('data-bs-placement', 'top');
-        bookTitleElement.setAttribute('data-bs-custom-class', 'custom-tooltip');
-        bookTitleElement.setAttribute('title', bookTitle);
+        initializeTooltip(bookTitleElement, bookTitle)
 
         bookTitleElement.textContent = bookTitle
 
@@ -43,27 +40,38 @@ export default function createBookElement(booksDetails){
             const other = createElement('a', 'other-author', bookAuthors)
             other.textContent = ' and other';
             // Set attributes for the popover of other authors
-            other.setAttribute('tabindex', '0')
-            other.setAttribute('role', 'button');
-            other.setAttribute('data-bs-toggle', 'popover');
-            other.setAttribute('data-bs-trigger', 'focus');
-            other.setAttribute('data-bs-title', 'Other Author');
-            other.setAttribute('data-bs-content', otherAuthors.join(', '));
-            
-            // Initialize the popover for the other authors using bootstrap
-            new bootstrap.Popover(other, {
-                trigger: 'focus'
-            });
-              
+            initializePopover(other, otherAuthors.join(', '))
         } 
 
         // Create function for the book description
         const descriptionBtn = createElement('button', 'description-btn', bookDiv)
         descriptionBtn.textContent = 'about'
 
-        // Initialize the tooltip for the book title using bootstrap
-        const tooltip = new bootstrap.Tooltip(bookTitleElement)
-
     })
     displayBookDescription()
+}
+
+
+
+function initializeTooltip(element, title){
+    element.setAttribute('data-bs-toggle', 'tooltip');
+    element.setAttribute('data-bs-placement', 'top');
+    element.setAttribute('data-bs-custom-class', 'custom-tooltip');
+    element.setAttribute('title', title);
+    new bootstrap.Tooltip(element)
+}
+
+function initializePopover(element, content){
+    element.setAttribute('tabindex', '0')
+    element.setAttribute('role', 'button');
+    element.setAttribute('data-bs-toggle', 'popover');
+    element.setAttribute('data-bs-trigger', 'focus');
+    element.setAttribute('data-bs-title', 'Other Author');
+    element.setAttribute('data-bs-content', content);
+    
+    // Initialize the popover for the other authors using bootstrap
+    new bootstrap.Popover(element, {
+        trigger: 'focus'
+    });
+      
 }
