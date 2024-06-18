@@ -11,6 +11,15 @@
 <body>
     <div class="container">
         <header>
+            <div class="my-library-btn-container">
+                <button type="button" class="btn btn-primary position-relative">
+                    <i class="bi bi-book"></i>                    
+                    <span id="my-library-counter" class="my-library-counter position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </button>
+            </div>
             <div class="input-container">
                 <input type="text" id="input-subjects" class="input-subjects-text">
                 <button id="search-btn" class="search-btn">Search</button>
