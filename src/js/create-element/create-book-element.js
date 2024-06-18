@@ -1,4 +1,5 @@
 import { get } from "lodash";
+import { addBookToWishList } from "../components/wishlist/addToWishlist";
 import createElement from "./template";
 import displayBookDescription from "../display-element/displayDescription";
 // createElement(tag, className, parentContainer)
@@ -47,6 +48,10 @@ export default function createBookElement(booksDetails){
         const descriptionBtn = createElement('button', 'description-btn', bookDiv)
         descriptionBtn.textContent = 'about'
 
+        const wishBtn = createElement('button', 'wish-btn', bookDiv)
+        wishBtn.innerHTML = '<i class="bi bi-plus-circle"></i>'
+
+        wishBtn.addEventListener('click', () => addBookToWishList(bookTitle, wishBtn))
     })
     displayBookDescription()
 }
