@@ -12,11 +12,11 @@
     <div class="container">
         <header>
             <div class="my-library-btn-container">
-                <button id="my-library-btn" type="button" class="btn btn-primary position-relative">
+                <button id="my-library-btn" type="button" class="my-library-btn btn btn-primary position-relative">
                     <i class="bi bi-book"></i>                    
                     <span id="my-library-counter" class="my-library-counter position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                       0
-                      <span class="visually-hidden">unread messages</span>
+                      <span class="visually-hidden"></span>
                     </span>
                   </button>
             </div>
@@ -49,9 +49,12 @@
 
         <aside id="side-container" class="side-container ">
             <div id="my-library-container" class="my-library-container">
-                <button id="close-mylibrary-btn" class="close-mylibrary-btn">
-                    <i class="bi bi-x"></i>
-                </button>
+                <div class="close-btn-container">
+                    <button id="close-mylibrary-btn" class="close-mylibrary-btn">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+
                 <div class="my-library-title-container">
                     <h2>My library</h2>
                 </div>
