@@ -1,0 +1,25 @@
+@use '../utils/' as *;
+
+.side-container {
+    position: absolute;
+    top: 100px; /* Adjust as needed based on header height */
+    right: 15px; /* Adjust as needed based on padding */
+    width: 300px; /* Adjust the width as needed */
+    height: 400px;
+    max-height: calc(100vh - 100px); /* Adjust based on header height */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px) scale(0.95); /* Hide the panel slightly above its final position and smaller */
+    opacity: 0; /* Start with the panel fully transparent */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Apply transitions */
+    z-index: 1001;
+    overflow: auto;
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.side-container.show {
+    transform: translateY(0) scale(1); /* Slide to its final position and return to normal size */
+    opacity: 1; /* Fully opaque */
+    pointer-events: auto; /* Enable interaction when shown */
+}
+
