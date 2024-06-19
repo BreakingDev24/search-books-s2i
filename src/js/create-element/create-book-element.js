@@ -1,7 +1,8 @@
 import { get } from "lodash";
-import { addBookToWishList } from "../components/wishlist/addToWishlist";
+import { addBookToWishList, changeBtnStatus, myLibrary } from "../components/wishlist/addToWishlist";
 import createElement from "./template";
 import displayBookDescription from "../display-element/displayDescription";
+
 // createElement(tag, className, parentContainer)
 
 /**
@@ -50,6 +51,7 @@ export default function createBookElement(booksDetails){
 
         const wishBtn = createElement('button', 'wish-btn', bookDiv)
         wishBtn.innerHTML = '<i class="bi bi-plus-circle"></i>'
+        changeBtnStatus(wishBtn, bookTitle, myLibrary)
 
         wishBtn.addEventListener('click', () => addBookToWishList(bookTitle, wishBtn))
     })
