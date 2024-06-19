@@ -13,6 +13,8 @@
         overflow: hidden;
 
         .book-title {
+            font-family: $book-title-font;
+            font-weight: bold;
             width: 100%;
             overflow: hidden;
             white-space: nowrap;
