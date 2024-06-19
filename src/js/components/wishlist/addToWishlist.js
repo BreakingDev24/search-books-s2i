@@ -1,6 +1,6 @@
 import { renderMylibrary } from "./renderMyLibrary";
 
-const myLibrary = []
+let myLibrary = []
 
 export function addBookToWishList(book, btn){
     if(!myLibrary.includes(book)){
@@ -16,6 +16,7 @@ export function addBookToWishList(book, btn){
         renderMylibrary(myLibrary)
         console.log(myLibrary)
     }
+    saveLocal(myLibrary)
     updateLibraryCounter(myLibrary.length)
 }
 
@@ -24,4 +25,17 @@ function updateLibraryCounter(count) {
     myLibraryCounter.textContent = count
 }
 
+
+function saveLocal(item) {
+    localStorage.setItem("my-library", JSON.stringify(item))
+}
+
+export function restoreLocalData(){
+    const getLibraryFromStorage = JSON.parse(localStorage.getItem('my-library'));
+    if(getLibraryFromStorage !== null){
+        myLibrary = getLibraryFromStorage;
+        renderMylibrary(myLibrary)
+        updateLibraryCounter(myLibrary.length)
+    }
+}
 
