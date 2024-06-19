@@ -52,3 +52,21 @@
 .view-btn-container button i {
     pointer-events: none; /* Disabilita gli eventi di puntamento */
 }
+
+.my-library-btn-container {
+    padding: 0 20px;
+    .my-library-btn{
+        padding: 0 !important;
+        background: none;
+        border: none;
+         i {
+             font-size: 1.6rem;
+             color: white;
+         }
+
+         .my-library-counter {
+            background-color: $bg-btn-primary-color !important;
+         }
+    }
+
+}
