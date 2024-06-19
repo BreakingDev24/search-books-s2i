@@ -1,0 +1,45 @@
+@use '../utils/' as *;
+
+
+.side-container{
+    background-color: $text-secondary-color;
+    border-radius: 10px;
+    color: white;
+    .my-library-container{
+        position: relative;
+        min-height: 100%;
+
+        .close-btn-container{
+            display: flex;
+            justify-content: flex-end;
+            .close-mylibrary-btn {
+                padding: 0;
+                display: flex;
+                color: $bg-primary-color;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+            }
+        }
+
+
+        .my-library-title-container {
+            text-align: center;
+            color: $bg-primary-color;
+            text-shadow: 2px 1px 1px $bg-btn-primary-color;
+            border-bottom: 1px solid white;
+            margin-bottom: 10px; 
+
+            h2 {
+            font-weight: bolder;
+
+            }
+        }
+
+        .my-library-content {
+            color: $text-primary-color;
+        }
+    }
+
+
+}
