@@ -3,7 +3,8 @@ import { renderMylibrary } from "./renderMyLibrary";
 import { updateLibraryCounter } from "./addToWishlist";
 import { saveLocal } from "./addToWishlist";
 
- function wishlsitToggle(){
+//Toggle the visibility of the side panel and overlay
+ function toggleSidePanel(){
     const sideContainer = document.getElementById('side-container');
     const overlay = document.getElementById('overlay');
     if(sideContainer.classList.contains('show')){
@@ -15,7 +16,7 @@ import { saveLocal } from "./addToWishlist";
     }
 
 }
-
+//Activates the side panel and overlay by removing the 'hidden' class
 export function activeSidePanel() {
     const sideContainer = document.getElementById('side-container');
     const overlay = document.getElementById('overlay')
@@ -24,6 +25,7 @@ export function activeSidePanel() {
     overlay.classList.remove('hidden')
 }
 
+// Clears the entire wishlist and updates the UI accordingly
 function clearAll(){
     myLibrary.length = 0;
     renderMylibrary(myLibrary);
@@ -39,16 +41,16 @@ function clearAll(){
     }
 }
 
-export function handleToggleMyLibraryBtn() {
+export function initializeSidePanelEvent() {
     const myLibraryBtn = document.getElementById('my-library-btn');
     const myLibraryCloseBtn = document.getElementById('close-mylibrary-btn');
     const overlay = document.getElementById('overlay')
     const clearAllBtn = document.getElementById('clear-all-btn');
 
 
-    myLibraryBtn.addEventListener('click', wishlsitToggle)
-    myLibraryCloseBtn.addEventListener('click', wishlsitToggle)
-    overlay.addEventListener('click', wishlsitToggle);
+    myLibraryBtn.addEventListener('click', toggleSidePanel)
+    myLibraryCloseBtn.addEventListener('click', toggleSidePanel)
+    overlay.addEventListener('click', toggleSidePanel);
     clearAllBtn.addEventListener('click', clearAll)
 }
 
