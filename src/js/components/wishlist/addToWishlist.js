@@ -19,7 +19,7 @@ export function addBookToWishList(book, btn){
     updateLibraryCounter(myLibrary.length)
 }
 
-function updateLibraryCounter(count) {
+export function updateLibraryCounter(count) {
     const myLibraryCounter = document.getElementById('my-library-counter');
     myLibraryCounter.textContent = count
 }
@@ -35,7 +35,7 @@ export function changeBtnStatus(btn, title, library){
 }
 
 
-function saveLocal(item) {
+export function saveLocal(item) {
     localStorage.setItem("my-library", JSON.stringify(item))
 }
 
