@@ -13,7 +13,7 @@ export const fetchBookData = async (inputBookGenres) => {
         const bookDetails = getBookDetails(response)
         createBookElement(bookDetails)
     } catch(err) {
-        console.log(err);
+        console.error(err);
     } finally {
       hideSpinner()
     }

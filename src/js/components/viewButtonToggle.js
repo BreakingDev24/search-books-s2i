@@ -32,7 +32,6 @@ export const changeView = (e) => {
     eventTarget.classList.add('active')
 
     lastClickedButton = eventTarget
-    console.log(eventTarget);
 
     switch(eventTarget.id) {
         case 'list-btn': 

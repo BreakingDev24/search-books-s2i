@@ -5,11 +5,10 @@ export const fetchDescription = async (key) => {
         const descriptionUrl = `https://openlibrary.org${key}.json`
         const response = await axios.get(descriptionUrl);
         const bookDescription = getDescription(response);
-        console.log(response);
         return bookDescription
         
     } catch(err){
-        console.log(err);
+        console.error(err);
     }
 
 }

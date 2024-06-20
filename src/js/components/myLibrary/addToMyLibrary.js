@@ -6,13 +6,10 @@ export let myLibrary = []
 export function addBookToMyLibrary(book, btn){
     if(!myLibrary.includes(book)){
         myLibrary.push(book);
-        // btn.style.backgroundColor = 'rgb(175, 141, 141)'
         renderMylibrary(myLibrary)
-        console.log(myLibrary);
     } else {
         myLibrary.splice(myLibrary.indexOf(book), 1)
         renderMylibrary(myLibrary)
-        console.log(myLibrary)
     }
     changeBtnStatus(btn, book, myLibrary)
     saveLocal(myLibrary)

@@ -19,7 +19,6 @@ export default async function displayBookDescription () {
                     const description = await fetchDescription(key)
                     descriptionContainer.showModal()
                     descriptionText.textContent = description
-                    // console.log(description)
                 } catch (err){
                     console.error(err)
                 }
@@ -30,6 +29,6 @@ export default async function displayBookDescription () {
             descriptionContainer.close();
         });
     } catch (err){
-
+        console.error(err)
     }
 }
