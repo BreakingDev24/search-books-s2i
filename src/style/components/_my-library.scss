@@ -41,6 +41,37 @@
             font-family: $list-font;
             font-size: 1.4rem;
         }
+
+        .clear-all-btn-container {
+            display: flex;
+            justify-content: center;
+
+            .clear-all-btn{
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s, box-shadow 0.2s;
+
+                &:hover{
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+                }
+                
+                &:active{
+                    transform: translateY(2px);
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                }
+
+                .show{
+                    display: block;
+                }
+                
+                .hide{
+                    display: none;
+                }
+            }
+        }
     }
 
 

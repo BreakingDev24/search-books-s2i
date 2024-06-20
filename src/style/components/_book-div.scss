@@ -22,4 +22,29 @@
         }
     }
 
+    .description-btn {
+        padding: 5px 15px;
+        font-weight: bolder;
+        border: none;
+        width: fit-content;
+        text-transform: uppercase;
+        
+        background-color: $bg-btn-secondary-color;
+        color: $bg-bookdiv-color;
+        box-shadow: 2px 13px 15px -10px rgba(0,0,0,0.93);
+        // border: 1px solid $bg-btn-primary-color;
+    }
+    
+    .wish-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: none;
+        width: 30px;
+        height: 30px;
+        padding: 5px 0 0 10px;
+        border-radius: 50px 0 0 0;
+        background-color: rgb(204, 212, 166);
+    }
+
 }

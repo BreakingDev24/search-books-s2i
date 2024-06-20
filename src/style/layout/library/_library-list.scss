@@ -9,7 +9,7 @@
     .book-div {
         display: grid;
         justify-items: center;
-    
+        position: relative;
         padding: 20px 10px;
         
         .info-container {
@@ -24,9 +24,8 @@
             width: 100%;
 
         }
-
         
-        }
+    }
 
         @include media-breakpoint-up(md){
             .book-div{
