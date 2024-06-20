@@ -16,6 +16,14 @@ import { saveLocal } from "./addToWishlist";
 
 }
 
+export function activeSidePanel() {
+    const sideContainer = document.getElementById('side-container');
+    const overlay = document.getElementById('overlay')
+
+    sideContainer.classList.remove('hidden'),
+    overlay.classList.remove('hidden')
+}
+
 function clearAll(){
     myLibrary.length = 0;
     renderMylibrary(myLibrary);
@@ -36,6 +44,7 @@ export function handleToggleMyLibraryBtn() {
     const myLibraryCloseBtn = document.getElementById('close-mylibrary-btn');
     const overlay = document.getElementById('overlay')
     const clearAllBtn = document.getElementById('clear-all-btn');
+
 
     myLibraryBtn.addEventListener('click', wishlsitToggle)
     myLibraryCloseBtn.addEventListener('click', wishlsitToggle)
