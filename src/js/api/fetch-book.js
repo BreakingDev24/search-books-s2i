@@ -5,6 +5,19 @@ import { showSpinner, hideSpinner } from "../create-element/createSpinner";
 
 import createBookElement from "../create-element/create-book-element";
 
+/**
+ * Function to fetch and display book data based on input genres.
+ * 
+ * This function performs the following steps:
+ * 1. Shows a loading spinner to indicate that data fetching is in progress.
+ * 2. Constructs a URL to fetch book data from the Open Library API based on the provided genres.
+ * 3. Makes an asynchronous request to fetch the data.
+ * 4. Extracts relevant book details from the API response.
+ * 5. Creates and displays book elements using the fetched data.
+ * 6. Handles any errors that occur during the data fetching process.
+ * 7. Hides the loading spinner after the data fetching process is complete, regardless of success or failure.
+ * */
+
 export const fetchBookData = async (inputBookGenres) => {
     showSpinner()
     try {
@@ -20,6 +33,7 @@ export const fetchBookData = async (inputBookGenres) => {
 
 }
 
+// Helper function to extract book details from the API response
 const getBookDetails = (book) => {
     const data = _.get(book, 'data', []);
     const works = _.get(data, 'works', [])
