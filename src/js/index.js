@@ -1,8 +1,8 @@
 import '../style/styles.scss'
 
 import { getInput } from "./display-element/displayBook";
-import { changeView } from './components/viewButtonToggle';
-import { handleViewportCheck } from './components/viewportChecker';
+import { changeView } from './components/view/viewButtonToggle';
+import { handleViewportCheck } from './components/view/viewportChecker';
 import { initializeSidePanelEvent, activeSidePanel } from './components/myLibrary/handleSidePanelVisibility';
 import { restoreLocalData } from './components/myLibrary/addToMyLibrary';
 import { addDateFooter } from './components/footer/dateUtils';

@@ -1,4 +1,4 @@
-import { library } from "../viewButtonToggle";
+import { library } from "../view/viewButtonToggle";
 import { renderMylibrary } from "./renderMyLibrary";
 
 export let myLibrary = []
