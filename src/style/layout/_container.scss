@@ -2,10 +2,12 @@
 
 .container {
     background-color: $bg-primary-color;
+    padding: 0;
     min-height: 100vh;
     display: grid;
     gap: 20px;
     position: relative;
     grid-template-rows: auto 1fr auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 }
 
