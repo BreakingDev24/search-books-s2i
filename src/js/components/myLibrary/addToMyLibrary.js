@@ -3,7 +3,7 @@ import { renderMylibrary } from "./renderMyLibrary";
 
 export let myLibrary = []
 
-export function addBookToWishList(book, btn){
+export function addBookToMyLibrary(book, btn){
     if(!myLibrary.includes(book)){
         myLibrary.push(book);
         // btn.style.backgroundColor = 'rgb(175, 141, 141)'

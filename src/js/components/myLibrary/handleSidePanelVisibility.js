@@ -1,7 +1,7 @@
-import { myLibrary } from "./addToWishlist";
+import { myLibrary } from "./addToMyLibrary";
 import { renderMylibrary } from "./renderMyLibrary";
-import { updateLibraryCounter } from "./addToWishlist";
-import { saveLocal } from "./addToWishlist";
+import { updateLibraryCounter } from "./addToMyLibrary";
+import { saveLocal } from "./addToMyLibrary";
 
 //Toggle the visibility of the side panel and overlay
  function toggleSidePanel(){

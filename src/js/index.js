@@ -3,8 +3,8 @@ import '../style/styles.scss'
 import { getInput } from "./display-element/displayBook";
 import { changeView } from './components/viewButtonToggle';
 import { handleViewportCheck } from './components/viewportChecker';
-import { initializeSidePanelEvent, activeSidePanel } from './components/wishlist/handleSidePanelVisibility';
-import { restoreLocalData } from './components/wishlist/addToWishlist';
+import { initializeSidePanelEvent, activeSidePanel } from './components/myLibrary/handleSidePanelVisibility';
+import { restoreLocalData } from './components/myLibrary/addToMyLibrary';
 import { addDateFooter } from './components/footer/dateUtils';
 
 const searchBtn = document.getElementById('search-btn');
