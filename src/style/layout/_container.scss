@@ -3,10 +3,9 @@
 .container {
     background-color: $bg-primary-color;
     min-height: 100vh;
-    padding: 20px 0;
     display: grid;
     gap: 20px;
     position: relative;
-    grid-template-rows: min-content;
+    grid-template-rows: auto 1fr auto;
 }
 

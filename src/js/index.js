@@ -1,15 +1,16 @@
 import '../style/styles.scss'
 
-import { fetchBookData } from "./api/fetch-book";
 import { getInput } from "./display-element/displayBook";
 import { changeView } from './components/viewButtonToggle';
 import { handleViewportCheck } from './components/viewportChecker';
 import { handleToggleMyLibraryBtn } from './components/wishlist/wishlistButtonToggle';
 import { restoreLocalData } from './components/wishlist/addToWishlist';
+import { addDateFooter } from './components/footer/dateUtils';
 
 const searchBtn = document.getElementById('search-btn');
 const viewBtnContainer = document.getElementById('view-btn-container');
 
+addDateFooter()
 restoreLocalData()
 
 searchBtn.addEventListener('click', getInput)
